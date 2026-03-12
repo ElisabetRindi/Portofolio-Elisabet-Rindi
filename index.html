@@ -1,0 +1,606 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Portofolio Elisabet Rindi - Mahasiswa Ilmu Komputer, Duta Pendidikan, dan Penggerak Komunitas">
+    <title>Portofolio Elisabet Rindi</title>
+    <link rel="icon" href="foto el.png" type="image/png">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;1,700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <a href="CV_Elisabet_Rindi.pdf" class="btn-download" download>Download My Resume</a>
+
+<style>
+.btn-download {
+    display: inline-block;
+    padding: 12px 30px;
+    background: var(--blue-dark);
+    color: white;
+    text-decoration: none;
+    border-radius: 25px;
+    margin-top: 20px;
+    font-weight: 600;
+    transition: 0.3s;
+}
+.btn-download:hover {
+    background: #4a8db5;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+</style>
+    
+    <style>
+
+.btn-wa:hover {
+    background-color: #128c7e;
+}
+       
+/* Ganti kode tombol lama dengan ini */
+.contact-form-container button[type="submit"] {
+    background-color: #007bff; /* Biru cerah */
+    color: white;
+    border: none;
+    padding: 12px;
+    border-radius: 8px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.3s;
+    width: 100%; /* Agar tombol selebar form */
+    margin-top: 5px;
+}
+
+.contact-form-container button[type="submit"]:hover {
+    background-color: #0056b3; /* Biru lebih gelap saat disentuh */
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.message-container {
+    display: flex;
+    gap: 10px;
+}
+
+.profile-section {
+    padding: 60px 20px;
+    background: #ffffff;
+}
+
+.profile-container {
+    max-width: 800px; /* Batasi lebar teks agar tidak terlalu panjang */
+    margin: 0 auto;  /* Posisi di tengah layar */
+}
+
+.profile-container h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.5rem;
+    color: #5fa8d3; /* Biru tema kamu */
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.profile-content p {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    margin-bottom: 20px;
+    color: #2c3e50;
+    text-align: justify; /* Teks rata kiri-kanan agar rapi */
+}
+
+/* KHUSUS UNTUK HP (Layar Kecil) */
+@media (max-width: 600px) {
+    .profile-container h2 {
+        font-size: 2rem;
+    }
+    .profile-content p {
+        font-size: 1rem; /* Ukuran font lebih kecil agar nyaman di HP */
+        line-height: 1.6;
+    }
+}
+
+.message-container textarea {
+    flex: 1;
+    padding: 10px;
+    height: 100px; /* Atur tinggi kolom pesan di sini */
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    resize: none; /* Mencegah user mengubah ukuran manual */
+}
+
+.message-container button {
+    padding: 0 20px;
+    background-color: #0056b3; /* Warna biru */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.message-container button:hover {
+    background-color: #004494;
+}
+        /* Kontak Section Style */
+    .contact-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 20px;
+        margin-top: 30px;
+    }
+
+    .contact-card {
+        background: #ffffff;
+        padding: 30px;
+        border-radius: 15px;
+        text-align: center;
+        border: 1px solid var(--blue-pastel);
+        transition: 0.4s;
+        box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+    }
+
+    .contact-card:hover {
+        background: var(--blue-soft);
+        transform: translateY(-10px);
+        border-color: var(--blue-dark);
+    }
+
+    .contact-card h3 { margin-bottom: 10px; color: var(--blue-dark); }
+    .contact-card a { 
+        text-decoration: none; 
+        color: var(--text-color); 
+        font-weight: 600;
+    }
+    .contact-wrapper {
+    display: flex;
+    flex-wrap: wrap; /* Agar bisa turun ke bawah di layar kecil */
+    gap: 40px;
+    align-items: flex-start;
+}
+
+.contact-wa {
+    flex: 1; /* Mengambil ruang di kiri */
+    min-width: 250px;
+    text-align: center;
+}
+
+.contact-form-container {
+    flex: 2; /* Mengambil ruang lebih besar di kanan */
+    min-width: 300px;
+}
+
+.btn-wa {
+    display: block;
+    padding: 15px;
+    background-color: #02580a5e;
+    color: white;
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: bold;
+}
+
+/* Mengatur agar input form lebih rapi */
+.contact-form-container form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+        /* TEMA WARNA BIRU PASTEL */
+        :root {
+            --bg-light: #f0f7ff;
+            --blue-pastel: #a2d2ff;
+            --blue-soft: #e3f2fd;
+            --blue-dark: #5fa8d3;
+            --text-color: #2c3e50;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Poppins', sans-serif; }
+        html { scroll-behavior: smooth; }
+        body { background-color: var(--bg-light); color: var(--text-color); }
+
+        /* TECH STACK SECTION */
+        .tech-stack {
+            padding: 60px 8%;
+            background: #ffffff;
+            text-align: center;
+        }
+        .tech-grid {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 20px;
+            margin-top: 30px;
+        }
+        .tech-card {
+            background: var(--blue-soft);
+            padding: 15px 25px;
+            border-radius: 50px;
+            font-weight: 600;
+            font-size: 0.9rem;
+            color: var(--blue-dark);
+            border: 1px solid var(--blue-pastel);
+            transition: 0.3s;
+        }
+        .tech-card:hover {
+        background: var(--blue-pastel);
+        color: white;
+        transform: translateY(-5px);
+        }
+
+        /* Efek fade-in saat scroll */
+        .animate-on-scroll {
+         opacity: 0;
+            transform: translateY(20px);
+            transition: all 0.8s ease-out;
+        }
+
+        .show {
+         opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* HEADER */
+        header {
+            display: flex; justify-content: space-between; align-items: center;
+            padding: 20px 8%; background: #ffffff; position: sticky; top: 0; z-index: 1000;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+        }
+        header h1 { font-size: 1rem; letter-spacing: 2px; font-weight: bold; }
+        nav ul { display: flex; list-style: none; }
+        nav ul li { margin-left: 20px; }
+        nav ul li a { text-decoration: none; color: var(--text-color); font-weight: 600; font-size: 0.8rem; }
+
+        /* HERO / PROFIL */
+        .hero { padding: 80px 8%; display: flex; align-items: center; gap: 50px; flex-wrap: wrap; }
+        .hero-img { flex: 1; min-width: 300px; background: var(--blue-pastel); padding: 15px; border: 1px solid #000; }
+        .hero-img img { width: 100%; display: block; filter: grayscale(100%); transition: 0.5s; }
+        .hero-img img:hover { filter: grayscale(0%); }
+        @media (max-width: 768px) {
+        .hero { flex-direction: column; text-align: center; }
+        .hero-text h2 { font-size: 2.5rem; }
+}
+
+        .hero-text { flex: 1.5; min-width: 300px; }
+        .hero-text h2 { font-family: 'Playfair Display', serif; font-size: 3.5rem; line-height: 1.1; margin-bottom: 20px; }
+        .hero-text h2 span { color: var(--blue-dark); font-style: italic; }
+        .hero-text p { font-size: 1.1rem; line-height: 1.8; }
+
+        /* MARQUEE (RUNNING TEXT) */
+        .marquee {
+            background: var(--blue-pastel); padding: 15px 0; overflow: hidden; white-space: nowrap;
+            border-top: 1px solid #000; border-bottom: 1px solid #000; font-weight: bold;
+        }
+        .marquee-content { display: inline-block; animation: scroll 20s linear infinite; }
+        @keyframes scroll { from { transform: translateX(100%); } to { transform: translateX(-100%); } }
+
+        /* PRESTASI */
+        .prestasi-section { padding: 80px 8%; }
+        .prestasi-grid { display: flex; gap: 40px; flex-wrap: wrap; margin-top: 30px; }
+        .video-box { flex: 1; min-width: 300px; border: 1px solid #ddd; background: #fff; padding: 10px; box-shadow: 10px 10px 0 var(--blue-pastel); }
+        .video-box video { width: 100%; }
+        
+        .table-box { flex: 1.2; min-width: 300px; }
+        table { width: 100%; border-collapse: collapse; background: #fff; }
+        th, td { padding: 15px; text-align: left; border-bottom: 1px solid #eee; }
+        th { background: var(--blue-soft); }
+
+        /* GALLERY (FOTO TAMBAHAN) */
+        .gallery { padding: 60px 8%; text-align: center; }
+        .gallery-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 15px; margin-top: 30px; }
+        .gallery-item { height: 200px; border-radius: 10px; overflow: hidden; border: 2px solid var(--blue-pastel); }
+        .gallery-item img { width: 100%; height: 100%; object-fit: cover; transition: 0.4s; }
+        .gallery-item img:hover { transform: scale(1.1); }
+
+        .hero-text p { 
+        font-size: 1.1rem; 
+        line-height: 1.8; 
+        margin-bottom: 20px; /* Jarak antara paragraf */
+        }
+
+        .profile-section {
+    padding: 60px 20px;
+    background: #ffffff;
+}
+
+.profile-container {
+    max-width: 800px; /* Batasi lebar teks agar tidak terlalu panjang */
+    margin: 0 auto;  /* Posisi di tengah layar */
+}
+
+.profile-container h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.5rem;
+    color: #5fa8d3; /* Biru tema kamu */
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.profile-content p {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    margin-bottom: 20px;
+    color: #2c3e50;
+    text-align: justify; /* Teks rata kiri-kanan agar rapi */
+}
+
+/* KHUSUS UNTUK HP (Layar Kecil) */
+@media (max-width: 600px) {
+    .profile-container h2 {
+        font-size: 2rem;
+    }
+    .profile-content p {
+        font-size: 1rem; /* Ukuran font lebih kecil agar nyaman di HP */
+        line-height: 1.6;
+    }
+}
+.hero {
+    display: flex; /* Membuat foto dan teks berjajar */
+    align-items: flex-start; /* Mengatur agar sejajar di bagian atas */
+    gap: 40px; /* Jarak antara foto dan teks */
+    padding: 50px 8%;
+    flex-wrap: wrap; /* Agar di HP bisa pindah ke bawah */
+}
+
+.profile-box {
+    background: var(--blue-pastel);
+    padding: 4px;
+    border: 1px solid #000;
+    flex-shrink: 0; /* Penting: agar kotak tidak mengecil/berubah bentuk */
+}
+
+.profile-box img {
+    width: 250px; /* Lebar foto tetap */
+    height: 300px; /* Tinggi foto tetap */
+    object-fit: cover; /* Agar tidak gepeng */
+    display: block;
+}
+
+.hero-text {
+    flex: 1; /* Teks akan mengisi sisa ruang yang tersedia */
+    min-width: 300px; /* Agar teks tidak terlalu sempit di HP */
+}
+
+/* Container untuk membungkus semua tombol */
+.experiences-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Agar posisi di tengah */
+    gap: 15px; /* Jarak antar tombol */
+    padding: 20px;
+}
+
+/* Styling untuk setiap tombol */
+.exp-btn {
+    background-color: #e3f2fd; /* Warna biru pastel senada */
+    border: 1px solid #90caf9;
+    padding: 12px 20px;
+    border-radius: 50px; /* Membuat sudut bulat */
+    text-align: center;
+    font-weight: 600;
+    color: #1976d2;
+    cursor: pointer;
+    transition: 0.3s;
+    
+    /* KUNCI KEP RAPIAN: */
+    width: 100%;          /* Memenuhi lebar container */
+    max-width: 400px;     /* Tidak terlalu lebar di layar besar */
+    box-sizing: border-box; /* Memastikan padding tidak merusak lebar */
+}
+
+.exp-btn:hover {
+    background-color: #bbdefb;
+}
+
+.info-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background: #f8fbfe;
+    padding: 12px 20px;
+    border-radius: 12px;
+    border: 1px solid #e1e8ed;
+    font-size: 1rem;
+    color: #4a5a6a;
+}
+
+.info-item strong {
+    color: #2c3e50; /* Warna lebih gelap untuk label */
+    font-weight: 600;
+}
+
+.info-item span {
+    color: #5fa8d3; /* Warna biru untuk isi kontak */
+}
+
+.info-item:hover {
+    background: #eef6ff;
+    transform: translateY(-2px);
+    transition: 0.3s;
+}
+
+/* Mengatur container tombol agar di tengah */
+.whatsapp-btn-container {
+    display: flex;
+    justify-content: center;
+    margin: 30px 0;
+}
+
+/* Styling tombol hijau WhatsApp */
+.wa-btn {
+    background-color: #25d366; /* Warna ikonik WhatsApp */
+    color: white;
+    padding: 15px 40px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.1rem;
+    transition: 0.3s;
+    box-shadow: 0 4px 10px rgba(37, 211, 102, 0.3);
+}
+
+.wa-btn:hover {
+    background-color: #128c7e; /* Warna hijau yang lebih gelap saat di-hover */
+    transform: scale(1.05);
+}
+
+/* Styling teks copyright di bawah */
+.footer-text {
+    text-align: center;
+    color: #999;
+    font-size: 0.9rem;
+    margin-top: 20px;
+}
+
+        /* KONTAK */
+        .contact { padding: 80px 8%; background: #ffffff; }
+        .contact-container { display: flex; gap: 50px; flex-wrap: wrap; }
+        .contact-form { flex: 1; display: flex; flex-direction: column; }
+        .contact-form input { padding: 15px; margin-bottom: 15px; border: 1px solid var(--blue-pastel); border-radius: 7px; }
+        .contact-form button { padding: 15px; background: var(--blue-pastel); border: none; border-radius: 25px; font-weight: bold; cursor: pointer; transition: 0.3s; }
+        .contact-form button:hover { background: var(--blue-dark); color: white; }
+
+        footer { text-align: center; padding: 40px; font-size: 0.8rem; color: #888; }
+        
+    </style>
+
+    <head>
+    <meta name="description" content="Elisabet Rindi - Mahasiswa Ilmu Komputer di Institut Teknologi Bacharuddin Jusuf Habibie. Memiliki ketertarikan pada teknologi, kepemimpinan, dan komunikasi.....">
+</head>
+</head>
+<body>
+
+    <header>
+        <h1>ELISABET RINDI</h1>
+        <nav>
+            <ul>
+                <li><a href="#profil">PROFIL</a></li>
+                <li><a href="#prestasi">PRESTASI</a></li>
+                <li><a href="#gallery">GALLERY</a></li>
+                <li><a href="#kontak">KONTAK</a></li>
+            </ul>
+        </nav>
+    </header>
+
+  
+    <section id="profil" class="hero">
+        <div class="profile-box">
+        <img src="foto el.png" alt="Elisabet Rindi">
+    </div>
+        <div class="hero-text">
+            <h2>About <span>Me</span></h2>
+            <p>Halo! Saya <strong>Elisabet Rindi</strong>Mahasiswa Ilmu Komputer di Institut Teknologi Bacharuddin Jusuf Habibie, Parepare.</p>
+            
+            <p>Saya memiliki ketertarikan pada teknologi, kepemimpinan, dan komunikasi publik. Bagi saya, belajar tidak hanya terjadi di ruang kelas, tetapi juga melalui organisasi, pengalaman, dan kontribusi nyata di masyarakat.</p>
+
+            <p>Sejak masa sekolah, saya terbiasa menjaga konsistensi dalam bidang akademik dengan meraih peringkat 1 dan 2 selama 6 tahun SD serta peringkat pertama selama tiga tahun SMP sehingga berhasil terpilih sebagai salah satu siswa berprestasi SMPN 8 Lembang. Pada masa SMA, saya semakin aktif dalam organisasi dan pengembangan diri hingga terpilih sebagai Duta Pelajar Kota Parepare 2022 dan meraih posisi 2nd Runner Up.</p>
+
+            <p>Saat ini saya aktif sebagai pengurus Badan Eksekutif Mahasiswa (BEM) 2026 dan Relawan Gesit Chapter Parepare. Saya juga memiliki pengalaman sebagai Moderator dan Master of Ceremony (MC) dalam berbagai acara, serta memiliki pengalaman menjadi narasumber dalam kegiatan Latihan Dasar Kepemimpinan Siswa dengan materi Public Speaking.</p>
+        </div></p>
+
+</section>
+            </div>
+    </div>
+</section>
+
+    </div>
+</section>
+        <section class="tech-stack">
+   <h2 style="font-family: 'Playfair Display'; font-size: 2.5rem;">Experiences</h2>
+    <div class="experiences-container">
+    <div class="exp-btn">Narasumber</div>
+    <div class="exp-btn">Master of Ceremony</div>
+    <div class="exp-btn">Badan Eksekutif Mahasiswa (BEM) 2026</div>
+    <div class="exp-btn">Relawan</div>
+    <div class="exp-btn">Sekretaris Pemilihan Duta Pelajar 2023</div>
+    <div class="exp-btn">Ketua Organisasi</div>
+    <div class="exp-btn">Koordinator</div>
+</div>
+
+
+    <div class="marquee">
+        <div class="marquee-content">
+            ILMU KOMPUTER • MAHASISWA ITH • DUTA PELAJAR 2022 • RELAWAN GESIT PAREPARE • MASTER OF CEREMONY • ILMU KOMPUTER • MAHASISWA ITH • DUTA PELAJAR 2022 • RELAWAN GESIT PAREPARE • MASTER OF CEREMONY
+        </div>
+    </div>
+
+    <section id="prestasi" class="prestasi-section">
+        <h2 style="font-family: 'Playfair Display'; font-size: 2.5rem;">Achievements</h2>
+        <div class="prestasi-grid">
+            </div>
+            <div class="table-box">
+                <table>
+                    <thead>
+                        <tr><th>Nama Prestasi</th><th>Tahun</th></tr>
+                    </thead>
+                    <tbody>
+                        <tr><td>2nd Runner Up Duta Pelajar Kota Parepare</td><td>2022</td></tr>
+                        <tr><td>Siswa Berprestasi SMPN 8 Lembang Pinrang</td><td></td></tr>
+                        <tr><td>Peringkat 1 (Kelas 7,8,9) Saat SMP</td><td>2018-2021</td></tr>
+                        <tr><td>Peringkat 1 (Kelas 2,3,5 dan 6), Peringkat 2 (Kelas 1 dan 4) Saat SD</td><td>2018-2021</td></tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </section>
+
+    <section id="gallery" class="gallery">
+        <h2 style="font-family: 'Playfair Display'; font-size: 2.5rem;">Moments & Activities</h2>
+        <div class="gallery-grid">
+            <div class="gallery-item"><img src="foto1.jpg" ></div>
+            <div class="gallery-item"><img src="foto2.jpg" ></div>
+            <div class="gallery-item"><img src="foto3.jpg" ></div>
+            <div class="gallery-item"><img src="foto4.jpg" ></div>
+            <div class="gallery-item"><img src="foto5.jpg" ></div>
+            <div class="gallery-item"><img src="foto6.jpg" ></div>
+            <div class="gallery-item"><img src="foto7.jpg" ></div>
+            <div class="gallery-item"><img src="foto8.jpg" ></div>
+            <div class="gallery-item"><img src="foto10.jpg" ></div>
+            <div class="gallery-item"><img src="foto11.jpg" ></div>
+            <div class="gallery-item"><img src="foto12.jpg" ></div>
+            <div class="gallery-item"><img src="foto13.jpg" ></div>
+            <div class="gallery-item"><img src="foto14.jpg" ></div>
+            <div class="gallery-item"><img src="foto15.jpg" ></div>
+            <div class="gallery-item"><img src="foto16.jpg" ></div>
+            <div class="gallery-item"><img src="foto17.jpg" ></div>
+        </div>
+    </section>
+
+    <section id="kontak" class="contact-section">
+    <div class="contact-card">
+       <h2 style="font-family: 'Playfair Display'; font-size: 2.5rem;">Contact Me</h2>
+        
+            <div class="info-item">
+                <i class="fab fa-instagram"></i> 
+                <strong>Instagram:</strong> <span>@elisabetrhii</span>
+            </div>
+            <div class="info-item">
+                <i class="fas fa-envelope"></i> 
+                <strong>Email:</strong> <span>ellrindi06@gmail.com</span>
+            </div>
+        </div>
+    </div>
+</section>
+
+    <section id="kontak" class="contact">
+        <section id="kontak" class="contact-section">
+  
+    <section id="kontak" class="contact-section">
+    <div class="whatsapp-btn-container">
+        <a href="https://wa.me/6289519019412" class="wa-btn">Hubungi via WhatsApp</a>
+    </div>
+
+    <div class="footer-text">
+        <p>&copy; 2026 Portofolio Elisabet Rindi</p>
+    </div>
+</section>
+
+    <script>
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('show');
+            }
+        });
+    });
+    document.querySelectorAll('.hero, .prestasi-section, .gallery, .contact').forEach(section => {
+        section.classList.add('animate-on-scroll');
+        observer.observe(section);
+    });
+</script>
+</body>
+</html>
